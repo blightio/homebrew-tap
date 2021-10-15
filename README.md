@@ -1,10 +1,10 @@
-# Blightio Tap
+# dotIndustries Tap
 
 ## How do I install these formulae?
 
-`brew install blightio/tap/<formula>`
+`brew install dotindustries/tap/<formula>`
 
-Or `brew tap blightio/tap` and then `brew install <formula>`.
+Or `brew tap dotindustries/tap` and then `brew install <formula>`.
 
 ## Documentation
 
