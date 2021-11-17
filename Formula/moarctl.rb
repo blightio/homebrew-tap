@@ -5,21 +5,21 @@
 class Moarctl < Formula
   desc "Cli app to for working with moar registry"
   homepage "https://github.com/dotindustries/homebrew-tap"
-  version "0.6.0"
+  version "0.6.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/dotindustries/moar/releases/download/0.6.0/moarctl_0.6.0_Darwin_arm64.tar.gz"
-      sha256 "55d8809a64420c8e93e48317231f5b59fa50202a4e8b3c3c325617479b88dbd0"
+      url "https://github.com/dotindustries/moar/releases/download/0.6.1/moarctl_0.6.1_Darwin_arm64.tar.gz"
+      sha256 "0489721df7d2c15223a8b68f95c28fe0c529c4372bff63114b518b412520c3bc"
 
       def install
         bin.install "moarctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dotindustries/moar/releases/download/0.6.0/moarctl_0.6.0_Darwin_x86_64.tar.gz"
-      sha256 "95ca7f0db71bfa8b3354ad8ed4a24c58764158fab31b39affc4b636dca63f28b"
+      url "https://github.com/dotindustries/moar/releases/download/0.6.1/moarctl_0.6.1_Darwin_x86_64.tar.gz"
+      sha256 "04e136139980b97d091ed4e1ff578735b45c46f20a31f6b4a45fdc430945f0af"
 
       def install
         bin.install "moarctl"
@@ -29,16 +29,16 @@ class Moarctl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/dotindustries/moar/releases/download/0.6.0/moarctl_0.6.0_Linux_x86_64.tar.gz"
-      sha256 "d75ad8213a36d336d5214b945f02a55aec6af2beec3b75f2f2e59ad2228e1b4c"
+      url "https://github.com/dotindustries/moar/releases/download/0.6.1/moarctl_0.6.1_Linux_x86_64.tar.gz"
+      sha256 "68108a50c2b9e795e7572665586686ce779f06df873b745de2b0c8233e0d73ca"
 
       def install
         bin.install "moarctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dotindustries/moar/releases/download/0.6.0/moarctl_0.6.0_Linux_arm64.tar.gz"
-      sha256 "41db8f96daef6d88ac33e39a9b13224deef8f5442b266401fcc69ad01d81f7ae"
+      url "https://github.com/dotindustries/moar/releases/download/0.6.1/moarctl_0.6.1_Linux_arm64.tar.gz"
+      sha256 "3005ef3e9c3d368cd1ec863faee792c4bd955dbe42a4c3a9941a822d4b8123fd"
 
       def install
         bin.install "moarctl"
