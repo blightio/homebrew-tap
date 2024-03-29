@@ -5,21 +5,21 @@
 class Moarctl < Formula
   desc "Cli app to for working with moar registry"
   homepage "https://github.com/dotindustries/homebrew-tap"
-  version "0.7.0"
+  version "0.8.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/dotindustries/moar/releases/download/v0.7.0/moarctl_0.7.0_darwin_amd64.tar.gz"
-      sha256 "c1bd2d2b2fd5504daff3633f5d8763b09598e173adec94807147404261454494"
+    if Hardware::CPU.arm?
+      url "https://github.com/dotindustries/moar/releases/download/v0.8.0/moarctl_0.8.0_darwin_arm64.tar.gz"
+      sha256 "a714920e49fdd313888211dea960edfb8db6eb11241f2090bdc6c085f7395fa6"
 
       def install
         bin.install "moarctl"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/dotindustries/moar/releases/download/v0.7.0/moarctl_0.7.0_darwin_arm64.tar.gz"
-      sha256 "e2c939950d168d3bd635dd43b1e536116eb431d44e3b50e8a0fe72cfc821d294"
+    if Hardware::CPU.intel?
+      url "https://github.com/dotindustries/moar/releases/download/v0.8.0/moarctl_0.8.0_darwin_amd64.tar.gz"
+      sha256 "ee8cec72732867d0e885a71d47782e07a79daf5b1e9e4a952d8d592c991c20a7"
 
       def install
         bin.install "moarctl"
@@ -28,17 +28,17 @@ class Moarctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dotindustries/moar/releases/download/v0.7.0/moarctl_0.7.0_linux_arm64.tar.gz"
-      sha256 "8319d4bb87143305da256b9f5b6a91921d1ac69e9165ba34718dc1259255f8ff"
+    if Hardware::CPU.intel?
+      url "https://github.com/dotindustries/moar/releases/download/v0.8.0/moarctl_0.8.0_linux_amd64.tar.gz"
+      sha256 "033b3719cee1590fa2dacd9a8b3d9cfee3c0738532dc6342599548681d142d99"
 
       def install
         bin.install "moarctl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dotindustries/moar/releases/download/v0.7.0/moarctl_0.7.0_linux_amd64.tar.gz"
-      sha256 "fa0fcae26bd3759c2eac3db4946dd1aba37dd064757f3e62e1b653ccb1998e00"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dotindustries/moar/releases/download/v0.8.0/moarctl_0.8.0_linux_arm64.tar.gz"
+      sha256 "be4dd4a4a025052cc7447419f728c3777b99beffa0c4da56a888788698cc15dd"
 
       def install
         bin.install "moarctl"
