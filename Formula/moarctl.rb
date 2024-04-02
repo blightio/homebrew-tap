@@ -5,21 +5,21 @@
 class Moarctl < Formula
   desc "Cli app to for working with moar registry"
   homepage "https://github.com/dotindustries/homebrew-tap"
-  version "0.9.0"
+  version "0.9.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/dotindustries/moar/releases/download/v0.9.0/moarctl_0.9.0_darwin_arm64.tar.gz"
-      sha256 "385513e92749544596adbd2ee0463df88ee6721c942d6eade9ecfe50217b1ae4"
+    if Hardware::CPU.intel?
+      url "https://github.com/dotindustries/moar/releases/download/v0.9.1/moarctl_0.9.1_darwin_amd64.tar.gz"
+      sha256 "d0cf7f1e22cc9222d18fa94886cf8c0033a780c7587e581c3ef294fd0fa23236"
 
       def install
         bin.install "moarctl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dotindustries/moar/releases/download/v0.9.0/moarctl_0.9.0_darwin_amd64.tar.gz"
-      sha256 "59ecc52cf8774cccc8e9d851468404ccaafdf4c614069e05b4e21fdc1be56ec0"
+    if Hardware::CPU.arm?
+      url "https://github.com/dotindustries/moar/releases/download/v0.9.1/moarctl_0.9.1_darwin_arm64.tar.gz"
+      sha256 "e0dd0d1834d0808aa52234ae63b2ef06e62d9733cd268e136daa65e498f017f5"
 
       def install
         bin.install "moarctl"
@@ -29,16 +29,16 @@ class Moarctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dotindustries/moar/releases/download/v0.9.0/moarctl_0.9.0_linux_arm64.tar.gz"
-      sha256 "0fcb54e8a3a19c999d9ab462ea497fff2b7d3b29a2fce1883788110a78f84bc2"
+      url "https://github.com/dotindustries/moar/releases/download/v0.9.1/moarctl_0.9.1_linux_arm64.tar.gz"
+      sha256 "fc5d90ec36d1e03d6c72c248f708162d547dd9e99ef1552647c155ddf31b4023"
 
       def install
         bin.install "moarctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dotindustries/moar/releases/download/v0.9.0/moarctl_0.9.0_linux_amd64.tar.gz"
-      sha256 "bfd0aaf9e0c0dc49c0af266afe12bf050b24062269e6331d769f0578275c78e8"
+      url "https://github.com/dotindustries/moar/releases/download/v0.9.1/moarctl_0.9.1_linux_amd64.tar.gz"
+      sha256 "e1045ea86bfef0512447d2d43f799bac77920a267b1ebca95626e0f1f6d51efc"
 
       def install
         bin.install "moarctl"
